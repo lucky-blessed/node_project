@@ -4,6 +4,8 @@ require('dotenv').config();
 const port = process.env.PORT || 8080;
 const mainRoutes = require('./routes/mainRoutes');
 
+
+// Middlewares
 app.use(mainRoutes);
 
 
