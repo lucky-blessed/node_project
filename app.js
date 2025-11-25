@@ -4,9 +4,23 @@ require('dotenv').config();
 const port = process.env.PORT || 8080;
 const mainRoutes = require('./routes/mainRoutes');
 
+const userRoutes = require('./routes/users');
+const ejs = require('ejs');
+
+// set view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+// Static files
+app.use(express.static('public'));
+
+// Parse incoming request bodies
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 
 // Middlewares
 app.use(mainRoutes);
+app.use(userRoutes);
 
 
 app.listen(port, ()=>{
