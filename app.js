@@ -7,6 +7,8 @@ const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/users');
 const ejs = require('ejs');
 
+const rateLimit = require('express-rate-limit');
+
 // set view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -18,7 +20,15 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+// Rate Limiter
+const limiter = rateLimit({
+    windowsMS: 1 * 15 * 1000,
+    max: 11,
+    message: 'Too many request, please try again later.'
+});
+
 // Middlewares
+app.use(limiter),
 app.use(mainRoutes);
 app.use(userRoutes);
 
