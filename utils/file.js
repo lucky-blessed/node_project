@@ -1,11 +1,11 @@
 const express = require('express');
 const fs = require('fs').promises;
-const filePath = require('..,database.json');
+const filePath = './database.json';
 
 async function readData(){
     try {
         const data = await fs.readFile(filePath, "utf-8");
-        return JSON.parse(data),
+        return JSON.parse(data);
         
     } catch (error) {
         res.status(500).send(`Internal Server Error: ${error.message}`);
@@ -25,5 +25,4 @@ async function writeData(){
 module.exports = {
     readData,
     writeData
-
 }

@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended:true}));
 
 // Rate Limiter
 const limiter = rateLimit({
-    windowsMS: 1 * 15 * 1000,
+    windowMS: 1 * 15 * 1000,
     max: 11,
     message: 'Too many request, please try again later.'
 });
