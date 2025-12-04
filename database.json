@@ -1,25 +1,34 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "first_name": "John Deo",
-            "username": "John1234",
-            "email": "john@example.com"
-        },
-
-        {
-            "id": 2,
-            "first_name": "Mary Monreo",
-            "username": "Mary0123",
-            "email": "mary_mon@example.com"
-        },
-
-        {
-            "id": 3,
-            "first_name": "Alice Benny",
-            "username": "Alice123",
-            "email": "alex@example.com"
-        }
-
-    ]
+  "users": [
+    {
+      "id": 1,
+      "first_name": "John Deo",
+      "username": "John1234",
+      "email": "john@example.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Mary Monreo",
+      "username": "Mary0123",
+      "email": "mary_mon@example.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Alice Benny",
+      "username": "Alice123",
+      "email": "alex@example.com"
+    },
+    {
+      "id": 4,
+      "first_name": "Lucky",
+      "username": "Lucky234",
+      "email": "lucky@example.com"
+    },
+    {
+      "id": 5,
+      "first_name": "newLucky",
+      "username": "newLucky234",
+      "email": "newlucky@example.com"
+    }
+  ]
 }

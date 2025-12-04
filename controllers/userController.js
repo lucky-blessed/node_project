@@ -20,7 +20,7 @@ async function createUser(req, res) {
         }
 
         // Step 4: Push new user to data.users array
-        data.user.push(newUser);
+        data.users.push(newUser);
 
         //Stem 5: Write the data object to the file
         await writeData(data);

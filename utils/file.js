@@ -13,7 +13,7 @@ async function readData(){
     }
 }
 
-async function writeData(){
+async function writeData(data){
     try {
         await fs.writeFile(filePath, JSON.stringify(data, null, 2));        
     } catch (error) {
