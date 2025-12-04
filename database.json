@@ -2,19 +2,22 @@
     "users": [
         {
             "id": 1,
-            "name": "John Deo",
+            "first_name": "John Deo",
+            "username": "John1234",
             "email": "john@example.com"
         },
 
         {
             "id": 2,
-            "name": "Mary Monreo",
+            "first_name": "Mary Monreo",
+            "username": "Mary0123",
             "email": "mary_mon@example.com"
         },
 
         {
             "id": 3,
-            "name": "Alice Benny",
+            "first_name": "Alice Benny",
+            "username": "Alice123",
             "email": "alex@example.com"
         }
 

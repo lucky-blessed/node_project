@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const port = process.env.PORT || 8080;
+
+const mongoose = require('mongoose');
+const uri = process.env.MONGODB_URI;
 const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/users');
 const ejs = require('ejs');
@@ -31,7 +34,15 @@ app.use(limiter),
 app.use(mainRoutes);
 app.use(userRoutes);
 
+mongoose.
+connect(uri)
+.then(async ()=>{
+    console.log(`Connected to MongoDB Successfully`);
 
-app.listen(port, ()=>{
+    app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`);
+    });
+}).catch((error)=>{
+    console.log(`Error connecting to MongoDB: ${error}`);
+
 });
