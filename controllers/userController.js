@@ -1,4 +1,5 @@
 const { readData, writeData } = require('../utils/file.js');
+const User = require("../models/userModel.js");
 
 
 async function createUser(req, res) {
@@ -17,7 +18,10 @@ async function createUser(req, res) {
             first_name: req.body.first_name,
             username: req.body.username,
             email: req.body.email
-        }
+        };
+
+        const user = new User(newUser);
+        await user.save();
 
         // Step 4: Push new user to data.users array
         data.users.push(newUser);

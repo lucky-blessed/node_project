@@ -29,6 +29,18 @@
       "first_name": "newLucky",
       "username": "newLucky234",
       "email": "newlucky@example.com"
+    },
+    {
+      "id": 6,
+      "first_name": "Blessed",
+      "username": "blessed0123",
+      "email": "blessed@example.com"
+    },
+    {
+      "id": 7,
+      "first_name": "Blessed",
+      "username": "blessed0123",
+      "email": "blessed@example.com"
     }
   ]
 }
