@@ -9,6 +9,10 @@ const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/users');
 const ejs = require('ejs');
 
+const YAML = require('yamljs');
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocument = YAML.load('./swagger.yaml');
+
 const rateLimit = require('express-rate-limit');
 
 // set view engine

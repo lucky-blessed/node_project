@@ -17,6 +17,8 @@
     "express-rate-limit": "^8.2.1",
     "fs": "^0.0.1-security",
     "mongoose": "^8.0.0",
-    "remove": "^0.1.5"
+    "remove": "^0.1.5",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
   }
 }
